@@ -284,10 +284,6 @@
     font-size: 24px;
   }
 
-  .ai-insights-sidebar {
-    display: none; /* Hide sidebar on mobile for more space */
-  }
-
   .ai-insights-content {
     width: 100%;
     padding: 10px;
