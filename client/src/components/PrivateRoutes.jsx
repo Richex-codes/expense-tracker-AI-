@@ -14,7 +14,7 @@ const PrivateRoute = () => {
             istoken = true;
         }
         } catch(e){
-            console.error('Invalid token:', error);
+            console.error('Invalid token:', e);
         }
     }
     return istoken? <Outlet /> : <Navigate to="/login" replace/>;

@@ -5,7 +5,7 @@ import "../styles/profilePage.css";
 import avatarImg from "../images/avatar-default-icon-2048x2048-h6w375ur.png";
 import axios from "axios";
 
-export default function profilePage() {
+export default function ProfilePage() {
   const [activeLink, setActiveLink] = useState("dashboard");
   const [userData, setUserData] = useState({});
   const [formData, setFormData] = useState({
