@@ -22,7 +22,7 @@ export default function LoginPage() {
     setErrorMessage("");
     try {
       const response = await axios.post(
-        "http://localhost:3001/login",
+        "https://expense-tracker-ai-ci4w.onrender.com/login",
         formData
       );
       console.log("user login successful", response.data);

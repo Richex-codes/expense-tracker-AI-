@@ -16,7 +16,7 @@ export default function ProfilePage() {
     confirmPassword: "",
   });
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const handleLinkClick = (link) => {
     setActiveLink(link);
@@ -30,9 +30,8 @@ export default function ProfilePage() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      
       const response = await axios.put(
-        `http://localhost:3001/user/${userData._id}`,
+        `https://expense-tracker-ai-ci4w.onrender.com/user/${userData._id}`,
         formData
       );
       setFormData({
@@ -57,11 +56,14 @@ export default function ProfilePage() {
           return;
         }
 
-        const response = await axios.get("http://localhost:3001/user", {
-          headers: {
-            Authorization: `Bearer ${token}`, // Include token in headers
-          },
-        });
+        const response = await axios.get(
+          "https://expense-tracker-ai-ci4w.onrender.com/user",
+          {
+            headers: {
+              Authorization: `Bearer ${token}`, // Include token in headers
+            },
+          }
+        );
         console.log("User data:", response.data);
         setUserData(response.data);
       } catch (error) {
@@ -76,9 +78,8 @@ export default function ProfilePage() {
 
   const handleLogOut = () => {
     localStorage.removeItem("token");
-    navigate("/login"); 
+    navigate("/login");
   };
-
 
   return (
     <div className="profile-page">

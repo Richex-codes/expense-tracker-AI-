@@ -55,11 +55,14 @@ export default function AIinsightsPage() {
   useEffect(() => {
     const fetchAllExpenses = async () => {
       try {
-        const response = await axios.get("http://localhost:3001/expense", {
-          headers: {
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
-          },
-        });
+        const response = await axios.get(
+          "https://expense-tracker-ai-ci4w.onrender.com/expense",
+          {
+            headers: {
+              Authorization: `Bearer ${localStorage.getItem("token")}`,
+            },
+          }
+        );
         setAllExpenses(response.data);
         console.log("Fetched all expenses:", response.data);
         const MonthlySpending = response.data.reduce((acc, expense) => {
@@ -101,7 +104,7 @@ export default function AIinsightsPage() {
     const fetchUserExpenses = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:3001/expense/monthly",
+          "https://expense-tracker-ai-ci4w.onrender.com/expense/monthly",
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -128,11 +131,14 @@ export default function AIinsightsPage() {
   useEffect(() => {
     const fetchUserBudget = async () => {
       try {
-        const response = await axios.get("http://localhost:3001/budget/user", {
-          headers: {
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
-          },
-        });
+        const response = await axios.get(
+          "https://expense-tracker-ai-ci4w.onrender.com/budget/user",
+          {
+            headers: {
+              Authorization: `Bearer ${localStorage.getItem("token")}`,
+            },
+          }
+        );
         setUserBudget(response.data);
         setTotalBudget(response.data.totalBudget);
         console.log("Fetched budget:", response.data);
@@ -191,9 +197,12 @@ export default function AIinsightsPage() {
     if (!SummaryJson) return; // Don't run if SummaryJson is not set
     const fetchAIInsights = async () => {
       try {
-        const response = await axios.post("http://localhost:3001/ai", {
-          summary: SummaryJson,
-        });
+        const response = await axios.post(
+          "https://expense-tracker-ai-ci4w.onrender.com/ai",
+          {
+            summary: SummaryJson,
+          }
+        );
         setAiInsights(response.data.insight);
       } catch (err) {
         console.error("Error fetching AI insights:", err);
@@ -224,20 +233,17 @@ export default function AIinsightsPage() {
   // ARRAY
   const currentDate = new Date();
   const currentYear = currentDate.getFullYear();
-  const currentMonthIndex = currentDate.getMonth(); // 0 = January, 4 = May, 
+  const currentMonthIndex = currentDate.getMonth(); // 0 = January, 4 = May,
 
   const monthsInYear = Array.from({ length: currentMonthIndex + 1 }, (_, i) => {
     const date = new Date(currentYear, i);
     return date.toLocaleString("default", { month: "long", year: "numeric" });
   });
 
-  
-
   const Monthlyarray = [];
   const foodArray = [];
   const transportArray = [];
   const entertainmentArray = [];
- 
 
   // array for monthly spending comparison chart
   monthsInYear.forEach((data) => {
@@ -280,8 +286,6 @@ export default function AIinsightsPage() {
       entertainmentArray.push(MonthlySpending[data].entertainment);
     }
   });
-
-
 
   const data1 = {
     labels: monthsInYear,
@@ -355,7 +359,7 @@ export default function AIinsightsPage() {
 
   const handleLogOut = () => {
     localStorage.removeItem("token");
-    navigate("/login"); 
+    navigate("/login");
   };
 
   return (

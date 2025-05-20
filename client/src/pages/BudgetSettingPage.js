@@ -44,7 +44,7 @@ export default function BudgetSettingPage() {
     { name: "Entertainment", budgetAmount: 0, spent: 0 },
   ]);
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   useEffect(() => {
     const token = localStorage.getItem("token");
@@ -54,11 +54,14 @@ export default function BudgetSettingPage() {
           console.log("No token found. User is not authenticated.");
           return;
         }
-        const response = await axios.get("http://localhost:3001/budget/user", {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        });
+        const response = await axios.get(
+          "https://expense-tracker-ai-ci4w.onrender.com/budget/user",
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          }
+        );
         setTotalBudget(response.data.totalBudget);
         setCategories(response.data.categories);
       } catch (error) {
@@ -73,7 +76,7 @@ export default function BudgetSettingPage() {
     const expenseData = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:3001/expense/monthly",
+          "https://expense-tracker-ai-ci4w.onrender.com/expense/monthly",
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -165,7 +168,7 @@ export default function BudgetSettingPage() {
       const monthToUse = selectedMonth || currentMonth;
 
       const response = await axios.post(
-        "http://localhost:3001/budget/save",
+        "https://expense-tracker-ai-ci4w.onrender.com/budget/save",
         { totalBudget, categories, month: monthToUse },
         {
           headers: {
@@ -181,7 +184,7 @@ export default function BudgetSettingPage() {
 
   const handleLogOut = () => {
     localStorage.removeItem("token");
-    navigate("/login"); 
+    navigate("/login");
   };
 
   return (

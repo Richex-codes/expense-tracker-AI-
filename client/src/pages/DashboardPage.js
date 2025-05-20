@@ -55,11 +55,14 @@ export default function DashBoardPage() {
   useEffect(() => {
     const fetchAllExpenses = async () => {
       try {
-        const response = await axios.get("http://localhost:3001/expense", {
-          headers: {
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
-          },
-        });
+        const response = await axios.get(
+          "https://expense-tracker-ai-ci4w.onrender.com/expense",
+          {
+            headers: {
+              Authorization: `Bearer ${localStorage.getItem("token")}`,
+            },
+          }
+        );
         console.log("Fetched all expenses:", response.data);
         const MonthlySpending = response.data.reduce((acc, expense) => {
           const date = new Date(expense.date);
@@ -121,7 +124,7 @@ export default function DashBoardPage() {
         setToDate(lastDay);
 
         const response = await axios.get(
-          "http://localhost:3001/expense/filter",
+          "https://expense-tracker-ai-ci4w.onrender.com/expense/filter",
           {
             params: {
               from: firstDay,
@@ -153,11 +156,14 @@ export default function DashBoardPage() {
   useEffect(() => {
     const fetchUserBudget = async () => {
       try {
-        const response = await axios.get("http://localhost:3001/budget/user", {
-          headers: {
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
-          },
-        });
+        const response = await axios.get(
+          "https://expense-tracker-ai-ci4w.onrender.com/budget/user",
+          {
+            headers: {
+              Authorization: `Bearer ${localStorage.getItem("token")}`,
+            },
+          }
+        );
         setTotalBudget(response.data.totalBudget);
         console.log("Fetched budget:", response.data);
       } catch (error) {
@@ -169,10 +175,9 @@ export default function DashBoardPage() {
 
   const handleLogOut = () => {
     localStorage.removeItem("token");
-    navigate("/login"); 
+    navigate("/login");
   };
-  
-  
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setModelData({ ...modelData, [name]: value });
@@ -185,7 +190,7 @@ export default function DashBoardPage() {
       if (editingExpense) {
         // Update existing expense
         const response = await axios.put(
-          `http://localhost:3001/expense/update/${editingExpense._id}`,
+          `https://expense-tracker-ai-ci4w.onrender.com/expense/update/${editingExpense._id}`,
           modelData
         );
         setExpenses((prevExpenses) =>
@@ -196,7 +201,7 @@ export default function DashBoardPage() {
       } else {
         // Create a new expense
         const response = await axios.post(
-          "http://localhost:3001/expense/save",
+          "https://expense-tracker-ai-ci4w.onrender.com/expense/save",
           modelData,
           {
             headers: {
@@ -228,7 +233,9 @@ export default function DashBoardPage() {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:3001/expense/delete/${id}`);
+      await axios.delete(
+        `https://expense-tracker-ai-ci4w.onrender.com/expense/delete/${id}`
+      );
       // Update expenses state immediately after a successful deletion
       setExpenses((prevExpenses) =>
         prevExpenses.filter((expense) => expense._id !== id)
@@ -333,15 +340,18 @@ export default function DashBoardPage() {
   const handleFilter = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.get("http://localhost:3001/expense/filter", {
-        params: {
-          from: fromDate,
-          to: toDate,
-        },
-        headers: {
-          Authorization: `Bearer ${localStorage.getItem("token")}`,
-        },
-      });
+      const response = await axios.get(
+        "https://expense-tracker-ai-ci4w.onrender.com/expense/filter",
+        {
+          params: {
+            from: fromDate,
+            to: toDate,
+          },
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+        }
+      );
 
       setExpenses(response.data); // update your table data
     } catch (err) {

@@ -26,7 +26,7 @@ export default function SignUpPage() {
     setLoading(true);
     try {
       const response = await axios.post(
-        "http://localhost:3001/register",
+        "https://expense-tracker-ai-ci4w.onrender.com/register",
         formData
       );
       console.log(`Successfully registered ${response.data}`);

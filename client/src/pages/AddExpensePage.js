@@ -7,7 +7,7 @@ import axios from "axios";
 export default function AddExpensePage() {
   const [activeLink, setActiveLink] = useState("dashboard");
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
     amount: "",
@@ -28,9 +28,13 @@ export default function AddExpensePage() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:3001/expense/save", formData, {
-        headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
-      });
+      await axios.post(
+        "https://expense-tracker-ai-ci4w.onrender.com/expense/save",
+        formData,
+        {
+          headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
+        }
+      );
       console.log("Expense added successfully!");
       setFormData({ amount: "", category: "", description: "", date: "" });
     } catch (err) {
@@ -40,7 +44,7 @@ export default function AddExpensePage() {
 
   const handleLogOut = () => {
     localStorage.removeItem("token");
-    navigate("/login"); 
+    navigate("/login");
   };
 
   return (
