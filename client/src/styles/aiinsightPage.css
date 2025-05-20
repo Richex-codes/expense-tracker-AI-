@@ -1,0 +1,306 @@
+.ai-insights-page{
+    background-color: rgb(249, 249, 252);
+}
+
+.ai-insights-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 200px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .logo-icon {
+    font-size: 4em; /* Adjust the size as needed */
+    color: rgb(74, 144, 226);
+  }
+  
+  .logo {
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  
+  nav {
+    margin-right: 20px;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links li {
+    list-style: none;
+  }
+  
+  .firstlink {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .secondlink1 {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .thirdlink {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .fourthlink {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .nav-links a:hover {
+    color: rgb(74, 144, 226);
+  }
+  
+  .nav-links a.active {
+    text-decoration: none;
+    background-color: rgb(74, 144, 226);
+    padding: 7px 10px;
+    border-radius: 5px;
+    color: white;
+  }
+
+  .ai-insights-main{
+    display: flex;
+  }
+
+  .ai-insights-sidebar {
+    width: 12%;
+    background-color: white;
+    color: black;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sidebar-links {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+    list-style-type: none;
+  }
+  
+  .sidebar-links a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 0;
+  }
+  
+  .sidebar-links li {
+    padding: 10px 0;
+    border-radius: 5px;
+  }
+  
+  .sidebar-links li:hover {
+    background-color: rgb(74, 144, 226, 0.1);
+  }
+  
+  .sidebar-links a:hover {
+    color: rgb(74, 144, 226);
+  }
+
+  .ai-insights-content {
+    margin: 0 auto;
+    width: 70%;
+    padding: 20px;
+  }
+
+  .ai-insights-content h1{
+    font-size: 2em;
+    color: rgb(74, 144, 226);
+    font-weight: bold;
+  }
+  
+  .ai-insights-content h2{
+    font-size: 1.5em;
+    color: black;
+    font-weight: bold;
+  }
+
+  .recommendation-section{
+    margin-top: 40px;
+  }
+
+  .card-container{
+    display: flex;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .advice-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+
+  .advice-card:hover{
+    transform: scale(1.05);
+  }
+
+  .advice-icon{
+    font-size: 50px;
+    margin-bottom: 20px;
+  }
+
+  .advice-card h3{
+    font-size: 1.17em;
+    color: rgb(74, 144, 226);
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .advice-card p{
+    color: #666;
+    margin-bottom: 15px;
+  }
+
+  .advice-card button{
+    padding:10px 20px;
+    background-color: rgb(74, 144, 226);
+    border-radius: 5px;
+    border: none;
+    color: white;
+  }
+
+  .trends-section{
+    margin-top: 40px;
+  }
+
+  .spending-trends{
+    display: flex;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .trend-card{
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+    width: 50%;
+  }
+
+  .trend-card h3{
+    font-size: 1.17em;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  /* Tablet and smaller screens (up to 1024px) */
+@media (max-width: 1024px) {
+  .ai-insights-main {
+    flex-direction: column;
+  }
+
+  .ai-insights-sidebar {
+    width: 100%;
+    min-height: auto;
+    box-shadow: none;
+    padding: 10px 20px;
+  }
+
+  .sidebar-links {
+    flex-direction: row;
+    gap: 10px;
+    padding: 10px 5px;
+    overflow-x: auto;
+  }
+
+  .sidebar-links li {
+    padding: 5px 10px;
+  }
+
+  .ai-insights-content {
+    width: 100%;
+    padding: 15px 10px;
+  }
+
+  .spending-trends {
+    flex-direction: column;
+  }
+
+  .trend-card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .card-container {
+    flex-direction: column;
+  }
+}
+
+/* Mobile screens (up to 600px) */
+@media (max-width: 600px) {
+
+  /* Hide everything inside header except logout */
+  .ai-insights-header .nav-links-container {
+    display: none;
+  }
+
+  .ai-insights-header {
+    display: flex;
+    justify-content: space-between; /* or center if you prefer */
+    padding: 10px 10px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .nav-links li {
+    flex: 1 1 45%;
+    text-align: center;
+  }
+
+  .logo-icon {
+    font-size: 3em;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
+  .ai-insights-sidebar {
+    display: none; /* Hide sidebar on mobile for more space */
+  }
+
+  .ai-insights-content {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .card-container {
+    gap: 10px;
+  }
+
+  .advice-card {
+    padding: 15px;
+  }
+}
+
+
+

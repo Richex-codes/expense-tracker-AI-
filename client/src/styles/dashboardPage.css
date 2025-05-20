@@ -1,0 +1,492 @@
+.dashboardpage {
+  background-color: rgb(249, 249, 252);
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 200px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-links-container {
+  display: block; /* or flex, depending on your layout */
+}
+
+.logout-container {
+  display: flex;
+  align-items: center;
+  margin-left: 20px; /* similar spacing as nav links */
+  margin-bottom: 1rem;
+}
+
+.logo-icon {
+  font-size: 4em; /* Adjust the size as needed */
+  color: rgb(74, 144, 226);
+}
+
+.logo {
+  text-decoration: none;
+  color: black;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+nav {
+  margin-right: 20px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.firstlink {
+  text-decoration: none;
+  color: black;
+}
+
+.secondlink1 {
+  text-decoration: none;
+  color: black;
+}
+
+.thirdlink {
+  text-decoration: none;
+  color: black;
+}
+
+.fourthlink {
+  text-decoration: none;
+  color: black;
+}
+
+.nav-links a:hover {
+  color: rgb(74, 144, 226);
+}
+
+.nav-links a.active {
+  text-decoration: none;
+  background-color: rgb(74, 144, 226);
+  padding: 7px 10px;
+  border-radius: 5px;
+  color: white;
+}
+
+.dashboard-content {
+  display: flex;
+}
+
+.sidebar {
+  width: 12%;
+  background-color: white;
+  color: black;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-links {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 20px;
+  list-style-type: none;
+}
+
+.sidebar-links a {
+  text-decoration: none;
+  color: black;
+  padding: 10px 0;
+}
+
+.sidebar-links li {
+  padding: 10px 0;
+  border-radius: 5px;
+}
+
+.sidebar-links li:hover {
+  background-color: rgb(74, 144, 226, 0.1);
+}
+
+.sidebar-links a:hover {
+  color: rgb(74, 144, 226);
+}
+
+.main-content {
+  margin: 0 auto;
+  width: 70%;
+}
+
+.top-section {
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.top-section h1 {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.budget-cards {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.budget-card h2 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #666;
+}
+
+.budget-card p {
+  font-size: 24px;
+  font-weight: bold;
+  color: black;
+}
+
+.budget-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.top-section button {
+  background-color: rgb(74, 144, 226);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.chart-section {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+}
+
+.category-spending {
+  width: 50%;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.spending-overtime {
+  width: 50%;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.category-spending h2 {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.spending-overtime h2 {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.recent-transactions{
+  width: 100%;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+  border-radius: 10px; 
+}
+
+.recent-transactions h2{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    text-align: left;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  th, td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: rgb(241, 241, 241);
+    color: #666;
+    font-weight: bold;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  tbody tr:hover {
+    background-color: #e1f5fe;
+    transition: 0.3s;
+  }
+  
+  tr td button {
+    background-color: gray;
+    font-size: 10px;
+    color: white;
+    padding:0 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 5px;
+  }
+
+  .modal-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modall{
+    width: 30%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+
+  .modall h2{
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  .modall form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .modall input{
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
+
+.modall p{
+    font-size: 16px;
+    margin: 0;
+}
+
+.modall button{
+  width: 30%;
+  margin-top: 10px;
+}
+
+.modall select{
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.close-modal{
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.filter-form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.filter-form label {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.filter-form input[type="date"] {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.filter-form button {
+  padding: 7px 14px;
+  background-color:rgb(74, 144, 226);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.filter-form button:hover {
+  background-color: #3730a3;
+}
+
+/* Tablet devices (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .dashboard-header {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+  }
+
+  .nav-links {
+    gap: 15px;
+  }
+
+  .dashboard-content {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    box-shadow: none;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .main-content {
+    width: 100%;
+    padding: 0 15px;
+  }
+
+  .budget-cards {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .budget-card {
+    width: 48%;
+    margin-bottom: 15px;
+  }
+
+  .chart-section {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .category-spending,
+  .spending-overtime {
+    width: 100%;
+  }
+
+  .modall {
+    width: 50%;
+  }
+}
+
+/* Mobile devices (max-width: 600px) */
+@media (max-width: 600px) {
+
+  /* Hide everything inside header except logout */
+  .dashboard-header .nav-links-container {
+    display: none;
+  }
+
+  .dashboard-header {
+    display: flex;
+    justify-content: space-between; /* or center if you prefer */
+    padding: 10px 10px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .logo-container h1{
+    font-size: 1.5em;
+  }
+
+  .budget-card {
+    width: 100%;
+  }
+
+  .main-content {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .top-section button,
+  .filter-form button {
+    width: 100%;
+  }
+
+  .filter-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filter-form label {
+    margin-bottom: 5px;
+  }
+
+  .modall {
+    width: 90%;
+  }
+
+  table, th, td {
+    font-size: 14px;
+  }
+  
+  .logo-icon {
+    font-size: 2.5em;
+  }
+  
+  .logo {
+    font-size: 24px;
+  }
+
+  .recent-transactions {
+    overflow-x: auto; /* enable horizontal scroll if content is wider */
+  }
+  
+  .recent-transactions table {
+    width: 100%; /* keep table width constrained */
+    min-width: 600px; /* optional, based on your table columns */
+    border-collapse: collapse;
+  }
+  
+}
+
+
+

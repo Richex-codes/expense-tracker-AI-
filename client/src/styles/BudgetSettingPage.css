@@ -1,0 +1,383 @@
+.BudgetSettingPage{
+    background-color: rgb(249, 249, 252);
+}
+  
+  .BudgetSetting-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 200px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .logo-icon {
+    font-size: 4em; /* Adjust the size as needed */
+    color: rgb(74, 144, 226);
+  }
+  
+  .logo {
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  
+  nav {
+    margin-right: 20px;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links li {
+    list-style: none;
+  }
+  
+  .firstlink {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .secondlink1 {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .thirdlink {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .fourthlink {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .nav-links a:hover {
+    color: rgb(74, 144, 226);
+  }
+  
+  .nav-links a.active {
+    text-decoration: none;
+    background-color: rgb(74, 144, 226);
+    padding: 7px 10px;
+    border-radius: 5px;
+    color: white;
+  }
+
+  .BudgetSetting-content {
+    display: flex;
+  }
+  
+  .BudgetSetting-sidebar {
+    width: 12%;
+    background-color: white;
+    color: black;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sidebar-links {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+    list-style-type: none;
+  }
+  
+  .sidebar-links a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 0;
+  }
+  
+  .sidebar-links li {
+    padding: 10px 0;
+    border-radius: 5px;
+  }
+  
+  .sidebar-links li:hover {
+    background-color: rgb(74, 144, 226, 0.1);
+  }
+  
+  .sidebar-links a:hover {
+    color: rgb(74, 144, 226);
+  }
+
+  .budgetSetting-main{
+    width: 70%;
+    margin: 0 auto;
+    padding: 20px;
+    /* display: flex;
+    flex-direction: column;
+    gap: 20px; */
+  }
+
+  .budgetSetting-main h1{
+    font-weight: bold;
+    font-size: 2em;
+  }
+
+  .budgetSetting-main p{
+    color: #666;
+
+  }
+
+  .monthly-budget{
+    width: 100%;
+    margin-bottom: 40px ;
+    margin-top: 40px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+
+  .monthly-budget h2{
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+
+  .monthly-budget p{
+    font-size: 1em;
+  }
+
+  .monthly-budget input{
+    width: 100%;
+    outline: none;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 12px;
+    border-radius: 5px;
+  }
+
+  .monthly-budget button{
+    padding: 10px 20px;
+    background-color: rgb(74, 144, 226);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .category-budget h2{
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+
+  .category-budget {
+    width: 100%;
+    overflow-x: auto;
+     /* enable horizontal scrolling if needed */
+  }
+  
+  .category-budget table {
+    width: 100%;
+    min-width: 600px; /* or whatever minimum width your table needs */
+    border-collapse: collapse;
+    display: table; /* keep table layout normal */
+    white-space: nowrap; /* keep cells from wrapping */
+    margin: 20px 0;
+    font-size: 16px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  .editCategory-budget-container{
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+
+  .editCategory-budget{
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 500px;
+    position: relative;
+  }
+
+  .editCategory-budget div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .editCategory-budget i{
+    font-size: 20px;
+    cursor: pointer;
+    color: #666;
+  }
+
+  .editCategory-budget input{
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 5px;
+  }
+
+  .editCategory-budget button{
+    padding: 10px 20px;
+    background-color: rgb(74, 144, 226);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  
+  th, td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: rgb(241, 241, 241);
+    color: #666;
+    font-weight: bold;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  tbody tr:hover {
+    background-color: #e1f5fe;
+    transition: 0.3s;
+  }
+  
+  .category-save{
+    background-color: gray;
+    font-size: 10px;
+    color: white;
+    padding:0 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+
+  .category-input{
+    border: none;
+    outline: none;
+    text-align: center;
+    background-color:transparent ;
+  }
+
+  .budget-graph{
+    width: 100%;
+    margin-bottom: 40px ;
+    margin-top: 40px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+
+  .budget-graph h2{
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+
+  .budget-alert{
+    width: 100%;
+    margin-top: 40px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+
+  .budget-alert h2{
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+
+  .CategoryError-message {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+  }
+
+  /* For tablets and smaller screens (<=1024px) */
+@media (max-width: 1024px) {
+  .BudgetSetting-content {
+    flex-direction: column;
+  }
+
+  .BudgetSetting-sidebar {
+    width: 100%;
+    order: 2;
+    box-shadow: none; /* optional: remove sidebar shadow for smaller screens */
+  }
+
+  .budgetSetting-main {
+    width: 100%;
+    padding: 15px;
+    order: 1;
+  }
+
+  table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  table th,
+  table td {
+    padding: 10px 8px;
+    font-size: 14px;
+  }
+}
+
+/* For mobile phones (<=600px) */
+@media (max-width: 600px) {
+
+  /* Hide everything inside header except logout */
+  .BudgetSetting-header .nav-links-container {
+    display: none;
+  }
+
+  .BudgetSetting-header {
+    display: flex;
+    justify-content: space-between; /* or center if you prefer */
+    padding: 10px 10px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .BudgetSetting-sidebar {
+    padding: 10px;
+  }
+
+  .monthly-budget input,
+  .monthly-budget button,
+  .category-input,
+  .category-save {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .category-save {
+    margin-top: 5px;
+  }
+}
+
+  

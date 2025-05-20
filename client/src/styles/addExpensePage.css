@@ -1,0 +1,260 @@
+.add-expense-page {
+  background-color: rgb(249, 249, 252);
+  min-height: 100vh;
+}
+.add-expense-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 200px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+}
+
+.nav-links-container {
+  display: block; /* or flex, depending on your layout */
+}
+
+.logout-container {
+  display: flex;
+  align-items: center;
+  margin-left: 20px; /* similar spacing as nav links */
+  margin-bottom: 1rem;
+}
+
+.logo-icon {
+  font-size: 4em; /* Adjust the size as needed */
+  color: rgb(74, 144, 226);
+}
+
+.logo {
+  text-decoration: none;
+  color: black;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+nav {
+  margin-right: 20px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.firstlink {
+  text-decoration: none;
+  color: black;
+}
+
+.secondlink1 {
+  text-decoration: none;
+  color: black;
+}
+
+.thirdlink {
+  text-decoration: none;
+  color: black;
+}
+
+.fourthlink {
+  text-decoration: none;
+  color: black;
+}
+
+.nav-links a:hover {
+  color: rgb(74, 144, 226);
+}
+
+.nav-links a.active {
+  text-decoration: none;
+  background-color: rgb(74, 144, 226);
+  padding: 7px 10px;
+  border-radius: 5px;
+  color: white;
+}
+
+.add-expense-main {
+  display: flex;
+}
+
+.add-expense-sidebar {
+  width: 12%;
+  min-height: 100vh;
+  background-color: white;
+  color: black;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-links {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 20px;
+  list-style-type: none;
+}
+
+.sidebar-links a {
+  text-decoration: none;
+  color: black;
+  padding: 10px 0;
+}
+
+.sidebar-links li {
+  padding: 10px 0;
+  border-radius: 5px;
+}
+
+.sidebar-links li:hover {
+  background-color: rgb(74, 144, 226, 0.1);
+}
+
+.sidebar-links a:hover {
+  color: rgb(74, 144, 226);
+}
+
+.add-expense-content {
+  width: 70%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.add-expense-content h1 {
+  font-size: 2em;
+  color: rgb(74, 144, 226);
+  font-weight: bold;
+}
+
+.add-expense-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.add-expense {
+  width: 60%;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.add-expense form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.add-expense input {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.add-expense p {
+  font-size: 16px;
+  margin: 0;
+}
+
+.add-expense button {
+  width: 30%;
+  margin-top: 10px;
+}
+
+.add-expense select {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+/* responsive design */
+@media screen and (max-width: 1024px) {
+  .add-expense-main {
+    flex-direction: column;
+  }
+
+  .add-expense-sidebar {
+    width: 100%;
+    min-height: auto;
+    box-shadow: none;
+    padding: 10px 20px;
+  }
+
+  .sidebar-links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .add-expense-content {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .add-expense {
+    width: 90%;
+  }
+
+  .add-expense button {
+    width: 50%;
+    align-self: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  /* Hide everything inside header except logout */
+  .add-expense-header .nav-links-container {
+    display: none;
+  }
+
+  /* Show logout container and center it */
+  .add-expense-header {
+    display: flex;
+    justify-content: space-between; /* or center if you prefer */
+    padding: 10px 10px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .logout-container {
+    display: block;
+  }
+
+  .logout-container .fourthlink {
+    color: rgb(74, 144, 226);
+    font-weight: bold;
+    text-decoration: none;
+    padding: 8px 12px;
+    border: 1px solid rgb(74, 144, 226);
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+
+  .logout-container .fourthlink:hover {
+    background-color: rgb(74, 144, 226);
+    color: white;
+  }
+
+  .add-expense-content h1{
+    text-align: center;
+  }
+
+  .logo-container h1 {
+    font-size: 1.5em;
+  }
+  
+}
+
